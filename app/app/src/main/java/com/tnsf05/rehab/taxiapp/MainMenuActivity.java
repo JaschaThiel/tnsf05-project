@@ -13,7 +13,7 @@ import android.widget.ListView;
 
 public class MainMenuActivity extends ListActivity {
 
-    String tests[] = { "MapActivity", "PushActivity","ScheduleActivity"};
+    String tests[] = { "PushActivity", "ScheduleActivity"};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
