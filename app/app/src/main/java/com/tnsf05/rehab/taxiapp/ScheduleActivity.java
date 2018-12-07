@@ -8,7 +8,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class ScheduleActivity extends AppCompatActivity {
-    private ArrayList scheduleList;
+    private ArrayList<String> scheduleList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,5 +44,14 @@ public class ScheduleActivity extends AppCompatActivity {
         scheduleList.add("Peter, 20:00");
         scheduleList.add("Stefan, 20:30");
         scheduleList.add("Tore, 21:00");
+
+        int carIndex;
+        for (int i = 0; i < scheduleList.size(); i++) {
+            carIndex = i + 1;
+            if (carIndex % 3 == 0) {
+                carIndex = carIndex - i;
+            }
+            scheduleList.set(i, scheduleList.get(i) + ", bil " + carIndex);
+        }
     }
 }
