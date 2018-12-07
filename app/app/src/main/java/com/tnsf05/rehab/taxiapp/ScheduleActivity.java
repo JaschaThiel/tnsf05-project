@@ -8,12 +8,24 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class ScheduleActivity extends AppCompatActivity {
+    private ArrayList scheduleList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ArrayList scheduleList = new ArrayList<String>();
+        populateList();
+
+        setContentView(R.layout.activity_schedule);
+        ListView mListView = (ListView) findViewById(R.id.mylistv);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, (String[]) scheduleList.toArray(new String[scheduleList.size()]));
+        mListView.setAdapter(adapter);
+
+    }
+
+    private void populateList() {
+        scheduleList = new ArrayList<String>();
         scheduleList.add("Assar, 12:30");
         scheduleList.add("Bengt, 13:00");
         scheduleList.add("Charlie, 13:30");
@@ -32,12 +44,5 @@ public class ScheduleActivity extends AppCompatActivity {
         scheduleList.add("Peter, 20:00");
         scheduleList.add("Stefan, 20:30");
         scheduleList.add("Tore, 21:00");
-
-        setContentView(R.layout.activity_schedule);
-        ListView mListView = (ListView) findViewById(R.id.mylistv);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, (String[]) scheduleList.toArray(new String[scheduleList.size()]));
-        mListView.setAdapter(adapter);
-
     }
 }
