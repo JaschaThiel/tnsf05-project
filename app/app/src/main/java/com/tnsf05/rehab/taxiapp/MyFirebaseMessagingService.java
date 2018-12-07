@@ -35,8 +35,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         }
         manager.notify(0, builder.build());
 
-
-       
     }
 
     private void handleNow() {
