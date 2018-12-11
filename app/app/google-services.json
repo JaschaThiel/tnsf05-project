@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "597331830728",
+    "firebase_url": "https://tsnf05-project-app.firebaseio.com",
+    "project_id": "tsnf05-project-app",
+    "storage_bucket": "tsnf05-project-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597331830728:android:2b2a43fdfa799ff5",
+        "android_client_info": {
+          "package_name": "com.tnsf05.rehab.taxiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597331830728-soega3ek97i4fpbdh7jiuulavql7lssl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tnsf05.rehab.taxiapp",
+            "certificate_hash": "550c3e3414429ada3875390b6db9805d19ca81ac"
+          }
+        },
+        {
+          "client_id": "597331830728-pclvhhjm80h8cp9qg06o91e8ep7o0jqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbtZV-J5o20oWsg6upeuxjP9GhwlPL8Jc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597331830728-pclvhhjm80h8cp9qg06o91e8ep7o0jqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
