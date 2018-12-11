@@ -13,7 +13,7 @@ import android.widget.ListView;
 
 public class MainMenuActivity extends ListActivity {
 
-    String tests[] = {"Schema", "Notfikationer"};
+    String tests[] = {"Schema", "Notifikationer"};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +29,12 @@ public class MainMenuActivity extends ListActivity {
         try{
             switch(testName){
                 case "Schema":
-                    c = Class.forName("com.tnsf05.rehab.taxiapp." + testName);
+                    c = Class.forName("com.tnsf05.rehab.taxiapp.ScheduleActivity");
                     intent = new Intent(this, c);
                     startActivity(intent);
                     break;
                 case "Notifikationer":
-                    c = Class.forName("com.tnsf05.rehab.taxiapp." + testName);
+                    c = Class.forName("com.tnsf05.rehab.taxiapp.NotificationHistory");
                     intent = new Intent(this, c);
                     startActivity(intent);
                     break;
