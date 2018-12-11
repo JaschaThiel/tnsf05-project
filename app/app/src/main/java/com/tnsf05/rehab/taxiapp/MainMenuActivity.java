@@ -13,7 +13,7 @@ import android.widget.ListView;
 
 public class MainMenuActivity extends ListActivity {
 
-    String tests[] = { "PushActivity", "ScheduleActivity", "NotificationHistory"};
+    String tests[] = {"Schema", "Notfikationer"};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +24,21 @@ public class MainMenuActivity extends ListActivity {
     protected void onListItemClick(ListView list, View view, int position, long id){
         super.onListItemClick(list,view,position,id);
         String testName = tests[position];
+        Class c;
+        Intent intent;
         try{
-            Class c = Class.forName("com.tnsf05.rehab.taxiapp." + testName);
-            Intent intent = new Intent(this, c);
-            startActivity(intent);
+            switch(testName){
+                case "Schema":
+                    c = Class.forName("com.tnsf05.rehab.taxiapp." + testName);
+                    intent = new Intent(this, c);
+                    startActivity(intent);
+                    break;
+                case "Notifikationer":
+                    c = Class.forName("com.tnsf05.rehab.taxiapp." + testName);
+                    intent = new Intent(this, c);
+                    startActivity(intent);
+                    break;
+            }
         } catch(ClassNotFoundException e){
             e.printStackTrace();
         }
